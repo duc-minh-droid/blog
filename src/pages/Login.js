@@ -21,7 +21,7 @@ function Login({setIsAuth}) {
     <div>
       <div id="container">
         <div id="ghost-bubble" className="chat-bubble"></div>
-        <button onClick={signInWithGoogle} className='signIn flex items-center bg-[#2ecc71] py-2 px-4 text-xl text-white'>
+        <button onClick={signInWithGoogle} className='signIn flex items-center bg-[#2ecc71] py-2 px-4 text-xl text-white gap-1'>
           <FcGoogle />
           Sign in with google</button>
         <div className="ghost">

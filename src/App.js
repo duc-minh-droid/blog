@@ -19,7 +19,7 @@ function App() {
           <nav className="flex h-full gap-5 items-center flex-1">
             <LinkTag to='/'>Home</LinkTag>
             {!isAuth? <LinkTag to='/login'>Login</LinkTag> : <>
-            <LinkTag to='/posts/create'>Create post</LinkTag>
+            <LinkTag to='/posts/create'>Create</LinkTag>
             <LinkTag to='/posts/mine'>My post</LinkTag></>}
           </nav>
           <div>

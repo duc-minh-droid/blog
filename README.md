@@ -1,3 +1,2 @@
-# To do
-- Login page
-- toasify everything
+# Site is live
+https://ghostblob.netlify.app/

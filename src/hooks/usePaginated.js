@@ -1,6 +1,6 @@
 import {useEffect, useState, useRef, useCallback} from 'react'
 import { query, startAfter, limit, getDocs, orderBy } from "firebase/firestore";
-import { blogsDB, auth } from '../fb-config'
+import { blogsDB} from '../fb-config'
 
 export function usePaginated() {
     const [data, setData] = useState([])
@@ -55,7 +55,8 @@ export function usePaginated() {
         }
         })
         if (node) observer.current.observe(node)
-    }, [data])
+        // eslint-disable-next-line
+    }, [ data])
   return {data, lastElement, loading, hasMore}
 }
 

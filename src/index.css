@@ -1,13 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap');
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'nunito', 'opensans';
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.active {
+    text-decoration: underline cyan 2px;
 }
+
+#container {
+    position: relative;
+    margin-top: 100px; 
+    display: flex;
+    justify-content: center;
+}
+
+.signIn {
+    border: none;
+    border-radius: 0.6em;
+    transition: background 0.3s;
+    outline: none;
+}
+
+.chat-bubble {
+    text-align: center;
+    width: 100%;
+    max-width: 80vw;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
+    margin-bottom: 7em;
+    color: #fff;
+}
+
+#container {
+    animation: float 3s infinite alternate;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0.5em);
+    }
+
+    to {
+        transform: translateY(-0.5em);
+    }
+}
+
+.ghost {
+    background-color: #fff;
+    color: #fff;
+}
+
+.ghost * {
+    transition: all 0.3s;
+}
+
+.ghost>* {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
+}
+
+.ghost-torso {
+    width: 5em;
+    height: 7em;
+    background-color: inherit;
+    border-radius: 100px;
+    box-shadow: 0 0 12px #424242;
+    transition: all 0.3 background 0.4s 0.1s;
+    transform: translate(-50%, 50px);
+    z-index: -1;
+}
+
+.ghost-face {
+    margin-bottom: 1em;
+    background: none;
+}
+
+.ghost-face .ghost-eyes-l,
+.ghost-face .ghost-eyes-r {
+    width: 0.8em;
+    height: 0.8em;
+    background-color: #333;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0.4em;
+}
+
+.ghost-face .ghost-eyes-l {
+    right: 1em;
+}
+
+.ghost-face .ghost-eyes-r {
+    left: 1em;
+}
+
+.ghost-face .ghost-mouth {
+    width: 0.5em;
+    height: 0.3em;
+    border-radius: 50px;
+    border: 0.2em solid #333;
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.ghost-face .ghost-mouth-open {
+    border-top: 0.2em solid #333;
+    height: 0.2em;
+}
+
+.ghost-hands {
+    color: inherit;
+}
+
+.ghost-hands .ghost-hands-l,
+.ghost-hands .ghost-hands-r {
+    width: 1em;
+    height: 1.5em;
+    border-radius: 100px;
+    background: #fff;
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.3);
+}
+
+.ghost-hands .ghost-hands-r {
+    transform: translate(1.5em, 1em) rotate(15deg);
+}
+
+.ghost-hands .ghost-hands-l {
+    transform: translate(-1.5em, 2.5em) rotate(-15deg);
+}
+
+.ghost-legs {
+    width: 5em;
+    height: 1.5em;
+    top: 100%;
+    background-color: inherit;
+    box-shadow: 0 0 12px #424242;
+    border-bottom-left-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
+}
+
